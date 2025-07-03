@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+  <div class="container py-4">
+  
+
+    <div class="d-flex align-items-center mb-4 profile-header">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu7d67GkPNRGKxFo5-0jnhnVpB3h0fkkXjYA&s" class="rounded-circle me-3 profile-avatar" alt="Avatar" />
+      <div>
+        <h4 class="mb-1">Robert_no_Pattinson</h4>
+        <p class="text-muted mb-0">Explorando el mundo una foto a la vez 🌍📷</p>
+      </div>
+    </div>
+ 
+<div class="dropdown ajustes-dropdown">
+  <button class="btn btn-light ajustes-btn d-flex align-items-center" type="button" id="ajustesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-gear-fill me-1"></i> Ajustes
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="ajustesDropdown">
+    <li><a class="dropdown-item" href="#">Perfil</a></li>
+    <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+    <li><a class="dropdown-item" href="#">Privacidad y Data</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item text-danger fw-bold" href="#">Cerrar sesión</a></li>
+  </ul>
+</div>
+
+    <div class="d-flex justify-content-end mb-3">
+      <button id="toggleViewBtn" class="btn btn-outline-secondary">
+        <i class="bi bi-grid-3x3-gap"></i> Vista: 3 columnas
+      </button>
+    </div>
+
+ 
+    <div id="photoGrid" class="row g-3">
+
+     
+      <div class="col-12 col-md-4">
+        <div class="card insta-card">
+          <img src="https://picsum.photos/id/1015/600/400" class="card-img-top img-clickable"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-title="Montañas al Descubierto"
+            data-description="Aprecien esta hermosa foto sobre unas montañas, capturada durante una excursión de senderismo." />
+          <div class="card-body">
+            <h5 class="card-title d-none">Montañas al Descubierto</h5>
+            <p class="card-text d-none">Aprecien esta hermosa foto sobre unas montañas, capturada durante una excursión de senderismo.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <button class="btn btn-outline-danger btn-like" data-likes="14">
+                <i class="bi bi-heart"></i> Me gusta
+              </button>
+              <span class="likes-count">14 likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card insta-card">
+          <img src="https://picsum.photos/id/1025/600/400" class="card-img-top img-clickable"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-title="Paseo por el bosque"
+            data-description="Durante un paseo por el bosque, empezo a llover y esta temible bestia se empapo." />
+          <div class="card-body">
+            <h5 class="card-title d-none">Paseo por el bosque</h5>
+            <p class="card-text d-none">Durante un paseo por el bosque, empezo a llover y esta temible bestia se empapo.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <button class="btn btn-outline-danger btn-like" data-likes="22">
+                <i class="bi bi-heart"></i> Me gusta
+              </button>
+              <span class="likes-count">22 likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card insta-card">
+          <img src="https://picsum.photos/id/1033/600/400" class="card-img-top img-clickable"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-title="Llegando a japon"
+            data-description="Despues de un gran viaje, finalmente llegue a japon." />
+          <div class="card-body">
+            <h5 class="card-title d-none">Llegando a japon</h5>
+            <p class="card-text d-none">Despues de un gran viaje, finalmente llegue a japon.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <button class="btn btn-outline-danger btn-like" data-likes="30">
+                <i class="bi bi-heart"></i> Me gusta
+              </button>
+              <span class="likes-count">30 likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nueva fila de imágenes -->
+<div class="col-12 col-md-4">
+  <div class="card insta-card">
+    <img src="https://picsum.photos/id/1040/600/400" class="card-img-top img-clickable"
+      data-bs-toggle="modal"
+      data-bs-target="#imageModal"
+      data-title="Castillo al Descubierto"
+      data-description="Viendo esto me hace pensar, donde esta mi carta y mi buho.">
+    <div class="card-body">
+      <h5 class="card-title d-none">Castillo al Descubierto</h5>
+      <p class="card-text d-none">Viendo esto me hace pensar, donde esta mi carta y mi buho.</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="btn btn-outline-danger btn-like" data-likes="17">
+          <i class="bi bi-heart"></i> Me gusta
+        </button>
+        <span class="likes-count">17 likes</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-md-4">
+  <div class="card insta-card">
+    <img src="https://picsum.photos/id/1062/600/400" class="card-img-top img-clickable"
+      data-bs-toggle="modal"
+      data-bs-target="#imageModal"
+      data-title="Terror entre sabanas"
+      data-description="Esta temible bestia esta planeando dominar al mundo.">
+    <div class="card-body">
+      <h5 class="card-title d-none">Terror entre sabanas</h5>
+      <p class="card-text d-none">Esta temible bestia esta planeando dominar al mundo.</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="btn btn-outline-danger btn-like" data-likes="9">
+          <i class="bi bi-heart"></i> Me gusta
+        </button>
+        <span class="likes-count">9 likes</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-md-4">
+  <div class="card insta-card">
+    <img src="https://picsum.photos/id/1074/600/400" class="card-img-top img-clickable"
+      data-bs-toggle="modal"
+      data-bs-target="#imageModal"
+      data-title="Peligroso pero dulce"
+      data-description="Se ve temible, pero es amigable.">
+    <div class="card-body">
+      <h5 class="card-title d-none">Peligroso pero dulce</h5>
+      <p class="card-text d-none">Se ve temible, pero es amigable.</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="btn btn-outline-danger btn-like" data-likes="33">
+          <i class="bi bi-heart"></i> Me gusta
+        </button>
+        <span class="likes-count">33 likes</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+
+ 
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <img id="modalImg" class="w-100 rounded-top" src="" alt="Imagen ampliada">
+        <div class="modal-body">
+          <h5 id="modalTitle"></h5>
+          <p id="modalDescription" class="text-muted"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<button
+  class="btn btn-primary rounded-circle create-post-btn"
+  data-bs-toggle="modal"
+  data-bs-target="#newPostModal"
+  title="Crear nuevo post">
+  <i class="bi bi-plus-lg fs-4"></i>
+</button>
+
+
+<div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-end modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newPostModalLabel">Crear nuevo post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        
+        <div class="mb-3">
+          <label for="postTitle" class="form-label fw-bold">Añadir título a tu nuevo post</label>
+          <input type="text" class="form-control" id="postTitle" placeholder="Ej: Mi viaje a la montaña" />
+        </div>
+
+      
+        <div class="d-flex justify-content-around my-3">
+          <button class="btn btn-light" title="Agregar foto">
+            <i class="bi bi-image fs-3 text-primary"></i>
+          </button>
+          <button class="btn btn-light" title="Agregar ubicación">
+            <i class="bi bi-geo-alt fs-3 text-danger"></i>
+          </button>
+        </div>
+
+       
+        <div class="d-grid gap-2 mt-4">
+          <button class="btn btn-success">Publicar post</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar post</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown settings-dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-gear-fill"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="#">Perfil</a></li>
+    <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+    <li><a class="dropdown-item" href="#">Privacidad y Data</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item text-danger" href="#">Cerrar sesión</a></li>
+  </ul>
+</div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
